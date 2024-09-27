@@ -26,3 +26,15 @@
 | Supports allow rules only | Supports allow and deny rules |
 | Evaluates all rules before deciding whether to allow traffic | Evaluates rules in order, starting with the lowest numbered rule |
 | Stateful: return traffic is allowed, regardless of the rules | Stateless: Return traffic must be explicitly allowed by the rules |
+
+
+## Security best practices for VPC:
+
+- Create subnets in multiple availability zones to make fault tolerant and highly available
+- Use security groups to control traffic to EC2 instances in your subnet
+- Use network ACLs to control inbound and outbound traffic at the subnet level
+- Manage access to AWS resources in your VPC using AWS Identity and Access Management (IAM) identity federation, users, and roles. 
+- Use VPC Flow Logs to monitor the IP traffic going to and from a VPC, subnet, or network interface.
+- Use Network Access Analyzer to identify unintended network access to resources in our VPCs
+- Use AWS Network Firewall to monitor and protect your VPC by filtering inbound and outbound traffic.
+- Use Amazon GuardDuty to detect potential threats to your accounts, containers, workloads, and data within your AWS environment. 
