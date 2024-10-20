@@ -49,3 +49,50 @@ INIT -> INVOKE -> INVOKE -> SHUTDOWN
 
 ### Asynchronous invocation
 - Lambda queues the event for processing and returns a response immediately
+
+## AWS lambda API references:
+### Core lambda API operations:
+
+1. Create Function
+- Creates a new Lambda function with specified code, runtime, and execution role.
+- Required parameters: FunctionName, Runtime, Role, Handler, Code
+
+2. Invoke Function
+- Triggers the function synchronously or asynchronously
+- Parameters: FunctionName, InvocationType, Payload
+
+3. Update Function Code
+- Updates the deployment package of an existing function
+- Parameters: FunctionName, ZipFile
+
+4. Update Function Configuration
+- Modifies settings such as memory, timeout or environment variables
+- Parameters: FunctionName, MemorySize, Timeout, Environment
+
+5. Delete Function
+- Deletes a Lambda function
+- Parameters: FunctionName
+
+### Permissions & Access Control
+
+1. Add Permissions
+- Grants permission to another service to invoke your Lambda functions
+- Parameters: FunctionName, Action, Principal, StatementID
+
+2. Remove Permissions
+- Removes permissions previously added to a function
+- Parameters: FunctionName, StatementId
+
+
+### Monitoring and Logs
+
+1. Get Function Logs (via CloudWatch)
+- Lambda functions automatically log to CloudWatch Logs
+
+2. Get Function Information
+- Retrieves metadata and code location of a Lambda function
+- Parameter: FunctionName
+
+3. List Functions
+- Lists all Lambda functions in the account
+

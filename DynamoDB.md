@@ -56,6 +56,20 @@ DynamoDB is ideal for use cases that require consistent performance at any scale
     - **You can use DynamoDB Streams together with AWS Lambda to create a trigger—code that runs automatically whenever an event of interest appears in a stream.**
     - In addition to triggers, DynamoDB Streams enables powerful solutions such as **data replication** within and across AWS Regions, **materialized views of data** in DynamoDB tables, **data analysis using Kinesis materialized views**, and much more.
 
+## Expressions:
+i. Projection Expressions:
+- A projection expression is a string that identifies the attributes you want. To retrieve a single attribute, specify its name. For multiple attributes, the names must be comma-separated.
+
+ii. Condition expressions:
+- this is primarily used to determine which items should be modified for data manipulation operations such as PutItem, UpdateItem, and DeleteItem calls.
+
+iii. Expression attribute names:
+- This is a placeholder that you use in a projection expression as an alternative to an actual attribute name. An expression attribute name must begin with a #, and be followed by one or more alphanumeric characters.
+
+iv. Filter expressions:
+- determines which items (and not the attributes) within the Query results should be returned to you. All of the other results are discarded. Take note that the scenario says that you have to fetch specific attributes and not specific items.
+
+
 # Notes:
 - https://tutorialsdojo.com/amazon-dynamodb/
 i. When you read data from a DynamoDB table, the response might not reflect the results of a recently completed write operation. The response might include some stale data, but you should **eventually have consistent reads.**
